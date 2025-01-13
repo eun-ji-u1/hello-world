@@ -1,0 +1,22 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eun-ji-u1/hello-world.git"
+  },
+  "author": "eunji & brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eun-ji-u1/hello-world/issues"
+  },
+  "homepage": "https://github.com/eun-ji-u1/hello-world#readme",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
