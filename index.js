@@ -10,19 +10,18 @@ const data = XLSX.utils.sheet_to_json(sheet);
 const newData = []
 
 data.forEach((row) => {
+    const productNum = row["상품번호"]
     const fullName = row["상품"]
-
-    const index = fullName.indexOf("(")
-    const id = fullName.slice(index + 1, fullName.indexOf(")"))
-    const name = fullName.slice(0, index)
+    
 
     const colors = (row["색상"] || "").split(",")
     const price = row[" 가격"]
 
     colors.forEach((color) => {
         newData.push({
-            "상품명": `${id} - ${name} - ${color}`,
+            "상품명": `${productNum}-${fullName}-${color}`,
             "가격": price
+        
         })
     })
 })
