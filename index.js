@@ -19,8 +19,8 @@ data.forEach((row) => {
 
     colors.forEach((color) => {
         newData.push({
-            "상품명": `${productNum}-${fullName}-${color}`,
-            "가격": price
+            "상품명": `${productNum}-${fullName}-${color},`,
+            "가격": `${price},`
         
         })
     })
