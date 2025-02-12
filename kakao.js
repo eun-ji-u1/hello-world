@@ -1,26 +1,29 @@
 const XLSX = require('xlsx');
 
-const fileName = 'test.xlsx'
+const fileName = 'kakao.xlsx'
 
 const workbook = XLSX.readFile(fileName);
 const sheetName = workbook.SheetNames[0];
 const sheet = workbook.Sheets[sheetName];
-const data = XLSX.utils.sheet_to_json(sheet);
+const data = XLSX.utils.sheet_to_json(sheet)
 
 const newData = []
 
 data.forEach((row) => {
+    const Num = row ["번호"]
     const productNum = row["상품번호"]
     const fullName = row["상품"]
     
+// 01-대용량 PVC 투명 펜케이스 (1433)
 
     const colors = (row["색상"] || "").split(",")
     const price = row[" 가격"]
 
     colors.forEach((color) => {
         newData.push({
-            "상품명": `${productNum}-${fullName}-${color},`,
-            "가격": `${price},`
+            "상품명": `${Num}-${fullName} (${productNum})`,
+            "색상":`${color}`,
+            "가격": `${price}`
         
         })
     })
