@@ -2,7 +2,7 @@
 
 학습하는 기록을 남기는 레포지토리!
 
-## web-projects
+## [web-projects](./web-projects/)
 
 ### [glass-ui](./web-projects/glass-ui/)
 
