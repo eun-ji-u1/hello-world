@@ -105,6 +105,8 @@ nav {
 }
 .cover {
   flex: 1;
+  display: flex;
+  justify-content: center;
   height: 60vh;
 }
 
@@ -182,4 +184,16 @@ nav {
     width: 50%;
     transform: translate(50%, 5%);
   }
+  .cover img {
+    height: 80%;
+    max-height: 400px;
+  }
+  .small-circle,
+  .mid-circle,
+  .big-circle {
+    opacity: 0.2;
+  }
+}
+
+@media screen and(max-width:360px) {
 }
